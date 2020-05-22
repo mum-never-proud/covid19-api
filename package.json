@@ -1,0 +1,38 @@
+{
+  "name": "covid19-api",
+  "version": "1.0.0",
+  "description": "covid19 api",
+  "main": "./src/app.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./src/app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mum-never-proud/covid19-api.git"
+  },
+  "keywords": [
+    "covid19",
+    "corona",
+    "api",
+    "virus"
+  ],
+  "author": "mum-never-proud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mum-never-proud/covid19-api/issues"
+  },
+  "homepage": "https://github.com/mum-never-proud/covid19-api#readme",
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/node": "7.8.7",
+    "@babel/preset-env": "7.9.6",
+    "eslint": "7.0.0",
+    "nodemon": "2.0.4"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "express-boom": "3.0.0",
+    "morgan": "1.10.0"
+  }
+}
