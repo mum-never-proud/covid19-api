@@ -17,14 +17,18 @@ export function write(data) {
     return false;
   }
 
-  return db.get('covids')
-    .push({ id: data.country.toLowerCase(), ...data, updated_at: Date.now() })
+  const record = { id: data.country.toLowerCase(), ...data, updated_at: Date.now() };
+
+  db.get('covids')
+    .push(record)
     .write();
+
+  return record;
 }
 
 export function update(id, data) {
   return db.get('covids')
     .find({ id })
-    .assign({ id: data.country.toLowerCase(), ...data, updated_at: Date.now() })
+    .assign({ ...data, updated_at: Date.now() })
     .write();
 }

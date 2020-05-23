@@ -15,7 +15,7 @@ export default function (stats, country) {
       .each((_, row) => {
         const children = $(row).children();
 
-        if (equalsIgnoreCase(children.eq(1).text().toLowerCase(), country)) {
+        if (equalsIgnoreCase(children.eq(1).text(), country)) {
           countryStat = children;
 
           return false;

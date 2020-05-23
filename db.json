@@ -8,7 +8,7 @@
       "total_deaths": "3,754",
       "new_deaths": "+28",
       "active_cases": "52,258",
-      "updated_at": 1590233272797
+      "updated_at": 1590235501735
     },
     {
       "id": "sweden",
@@ -29,6 +29,16 @@
       "new_deaths": "0",
       "active_cases": "1,455",
       "updated_at": 1590233623141
+    },
+    {
+      "id": "saudi arabia",
+      "country": "Saudi Arabia",
+      "total_cases": "67,719",
+      "new_cases": "0",
+      "total_deaths": "364",
+      "new_deaths": "0",
+      "active_cases": "39,003",
+      "updated_at": 1590234396332
     }
   ]
 }
