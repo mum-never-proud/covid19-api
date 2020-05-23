@@ -1,17 +1,13 @@
 import { Router } from 'express';
 import chalk from 'chalk';
-import fetchStats from '../services/fetch-stats';
-import parseStats from '../services/parse-stats';
+import fetchOrFetchStats from '../services/find-or-fetch-stats';
 import validateCountriesRequest from '../middlewares/validate-countries-request';
 
 const router = new Router();
 
 router.get('/:country', validateCountriesRequest, (req, res) => {
-  // eslint-disable-next-line no-console
-  fetchStats()
-    .then((response) => response.text())
-    .then((stats) => parseStats(stats, req.params.country))
-    .then((statsObj) => res.json(statsObj))
+  fetchOrFetchStats(req.params.country)
+    .then((stats) => res.json(stats).status(200))
     .catch((err) => {
       console.log(chalk`{red.bold failed to fetch >> stats ${err}}`);
       res.boom.badImplementation();

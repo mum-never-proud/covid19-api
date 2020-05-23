@@ -14,5 +14,4 @@ app.use(boom());
 app.use(morgan('combined'));
 app.use('/stats', stats);
 app.use((_, res) => res.boom.notFound());
-// eslint-disable-next-line no-console
 app.listen(APP_PORT, () => console.log(chalk`{blue.bold ${APP_NAME} started on ${APP_PORT} @ ${Date.now()}}`));

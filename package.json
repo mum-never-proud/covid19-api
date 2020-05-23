@@ -35,9 +35,11 @@
   "dependencies": {
     "chalk": "4.0.0",
     "cheerio": "1.0.0-rc.3",
+    "dayjs": "1.8.27",
     "dotenv": "8.2.0",
     "express": "4.17.1",
     "express-boom": "3.0.0",
+    "lowdb": "1.0.0",
     "morgan": "1.10.0",
     "node-fetch": "2.6.0"
   }

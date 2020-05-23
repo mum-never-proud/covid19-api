@@ -1,0 +1,34 @@
+{
+  "covids": [
+    {
+      "id": "india",
+      "country": "India",
+      "total_cases": "126,308",
+      "new_cases": "+1,514",
+      "total_deaths": "3,754",
+      "new_deaths": "+28",
+      "active_cases": "52,258",
+      "updated_at": 1590233272797
+    },
+    {
+      "id": "sweden",
+      "country": "Sweden",
+      "total_cases": "32,809",
+      "new_cases": "0",
+      "total_deaths": "3,925",
+      "new_deaths": "0",
+      "active_cases": "4,971",
+      "updated_at": 1590233582673
+    },
+    {
+      "id": "new zealand",
+      "country": "New Zealand",
+      "total_cases": "1,504",
+      "new_cases": "0",
+      "total_deaths": "21",
+      "new_deaths": "0",
+      "active_cases": "1,455",
+      "updated_at": 1590233623141
+    }
+  ]
+}
