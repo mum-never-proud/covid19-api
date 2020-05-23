@@ -5,7 +5,7 @@ dayjs.extend(relativeTime);
 
 export default function (_responseObject) {
   const responseObject = { ..._responseObject };
-  responseObject.status = `last updated ${dayjs(responseObject.updated_at).fromNow()}`;
+  responseObject.status = `last update ${dayjs(responseObject.updated_at).fromNow()}`;
 
   delete responseObject.id;
   delete responseObject.updated_at;
