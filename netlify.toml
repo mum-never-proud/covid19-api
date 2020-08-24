@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+  functions = "functions"
+[[redirects]]
+  from = "*"
+  to = "./.netlify/functions/app/stats/"
+  status = 404

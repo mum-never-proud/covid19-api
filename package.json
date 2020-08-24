@@ -4,7 +4,12 @@
   "description": "covid19 api",
   "main": "./src/app.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node ./src/app.js",
+    "build": "npm run clean && babel ./src -d ./functions",
+    "clean": "rm -rf ./functions",
+    "deploy": "npm run build && netlify deploy",
+    "dev": "nodemon --exec 'npm run build && npm run serve'",
+    "serve": "netlify dev",
+    "serve-live": "netlify dev --live",
     "test": "npm test"
   },
   "repository": {
@@ -24,12 +29,14 @@
   },
   "homepage": "https://github.com/mum-never-proud/covid19-api#readme",
   "devDependencies": {
+    "@babel/cli": "7.10.5",
     "@babel/core": "7.9.6",
     "@babel/node": "7.8.7",
     "@babel/preset-env": "7.9.6",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-plugin-import": "2.20.2",
+    "netlify-cli": "2.59.1",
     "nodemon": "2.0.4"
   },
   "dependencies": {
@@ -41,6 +48,7 @@
     "express-boom": "3.0.0",
     "lowdb": "1.0.0",
     "morgan": "1.10.0",
-    "node-fetch": "2.6.0"
+    "node-fetch": "2.6.0",
+    "serverless-http": "2.5.0"
   }
 }
